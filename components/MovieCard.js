@@ -13,7 +13,7 @@ export default function MovieCard({ movie }) {
 					layout='responsive'
 					alt={movie.title}
 				/>
-				<div className='text-white font-bold text-xl absolute bottom-3 left-4 drop-shadow-lg '>{movie.title}</div>
+				<div className='text-white font-bold text-xl absolute bottom-3 left-4 drop-shadow-lg'>{movie.title}</div>
 			</div>
 		</Link>
 	)

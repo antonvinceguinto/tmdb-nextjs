@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { server } from '../../config'
 import Image from 'next/image'
-import Meta from './../../components/Meta';
+import Meta from './../../components/Meta'
 
 export default function Movie({ movie }) {
 	return (
@@ -43,11 +43,18 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
 	const res = await axios(`${server}/popular?api_key=${process.env.API_KEY}&language=en-US&page=1`)
-
 	const movies = res.data.results
 
+	const upcomingRes = await axios(`${server}/upcoming?api_key=${process.env.API_KEY}&language=en-US&page=1`)
+	const upcomingMovies = upcomingRes.data.results
+
 	const ids = movies.map((movie) => movie.id)
-	const paths = ids.map((id) => ({ params: { id: id.toString() } }))
+	const upcomingIds = upcomingMovies.map((movie) => movie.id)
+
+	const popularPaths = ids.map((id) => ({ params: { id: id.toString() } }))
+	const upcomingPaths = upcomingIds.map((id) => ({ params: { id: id.toString() } }))
+
+	const paths = [ ...popularPaths, ...upcomingPaths ]
 
 	return {
 		paths,
