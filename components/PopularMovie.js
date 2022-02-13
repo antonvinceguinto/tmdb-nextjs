@@ -3,11 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 
 export default function PopularMovie({ movies }) {
-	return (
-		<div className='container max-w-full'>
-			{ControlledCarousel({ movies })}
-		</div>
-	)
+	return <div className='container max-w-full pt-8'>{ControlledCarousel({ movies })}</div>
 }
 
 function ControlledCarousel({ movies }) {
@@ -28,9 +24,11 @@ function ControlledCarousel({ movies }) {
 						objectFit='contain'
 						alt={movie.title}
 					/>
-					<Carousel.Caption className='px-16'>
-						<h3 className='text-white font-bold text-4xl pb-6 text-left'>{movie.title}</h3>
-						<p className='pb-4 text-left'>{movie.overview}</p>
+					<Carousel.Caption className='px-20 xs:px-1'>
+						<h3 className='text-white font-bold text-4xl pb-6 text-left xs:text-sm'>{movie.title}</h3>
+						<div className='xs:hidden'>
+							<p className='pb-4 text-left'>{movie.overview}</p>
+						</div>
 					</Carousel.Caption>
 				</Carousel.Item>
 			))}
