@@ -10,7 +10,7 @@ export default function Home({ popularMovies, upcomingMovies }) {
 		<div className='bg-black'>
 			<PopularMovie movies={popularMovies.results} />
 			<UpcomingMovie upcomingMovies={upcomingMovies.results} />
-			<PopularMovie movies={popularMovies.results} />
+			<UpcomingMovie upcomingMovies={upcomingMovies.results} />
 		</div>
 	)
 }
