@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 
 export default function PopularMovie({ movies }) {
-	return <div className='container max-w-full pt-8'>{ControlledCarousel({ movies })}</div>
+	return <div className='container max-w-full pt-8 pl-14'>{ControlledCarousel({ movies })}</div>
 }
 
 function ControlledCarousel({ movies }) {

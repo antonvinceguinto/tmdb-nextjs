@@ -1,8 +1,8 @@
 import axios from 'axios'
 import PopularMovie from '../components/PopularMovie'
 import UpcomingMovie from '../components/UpcomingMovie'
-import Hero from './../components/Hero'
 import { server } from './../config/index'
+import Sidebar from '../components/Sidebar'
 
 export default function Home({ popularMovies, upcomingMovies }) {
 	// console.log(upcomingMovies.results);
@@ -11,6 +11,9 @@ export default function Home({ popularMovies, upcomingMovies }) {
 			<PopularMovie movies={popularMovies.results} />
 			<UpcomingMovie upcomingMovies={upcomingMovies.results} />
 			<UpcomingMovie upcomingMovies={upcomingMovies.results} />
+			<div className='flex'>
+				<Sidebar />
+			</div>
 		</div>
 	)
 }
@@ -25,7 +28,7 @@ export async function getStaticProps() {
 	return {
 		props: {
 			popularMovies,
-			upcomingMovies,
+			upcomingMovies
 		}
 	}
 }
