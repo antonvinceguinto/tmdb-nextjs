@@ -33,8 +33,8 @@ function ControlledCarousel({ movies }) {
 						alt={movie.title}
 					/>
 					<Carousel.Caption className='px-20 xs:px-1 md:px-1'>
-						<h3 className='text-white font-bold text-4xl pb-6 text-left xs:opacity-0'>{movie.title}</h3>
-						<div className='xs:hidden'>
+						<h3 className='text-white font-bold text-4xl pb-6 text-left sm:opacity-0'>{movie.title}</h3>
+						<div className='opacity-100 sm:opacity-0'>
 							<p className='pb-4 text-left'>{movie.overview}</p>
 						</div>
 					</Carousel.Caption>

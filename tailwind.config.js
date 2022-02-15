@@ -1,4 +1,3 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
@@ -24,10 +23,6 @@ module.exports = {
 				}
 			}
 		},
-		screens: {
-			'xs': {'max': '700px'},
-			...defaultTheme.screens,
-		}
 	},
 	plugins: []
 }
