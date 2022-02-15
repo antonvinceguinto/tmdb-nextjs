@@ -7,7 +7,7 @@ import Sidebar from '../components/Sidebar'
 export default function Home({ popularMovies, upcomingMovies }) {
 	// console.log(upcomingMovies.results);
 	return (
-		<div className='bg-black h-screen'>
+		<div className='bg-black '>
 			<PopularMovie movies={popularMovies.results} />
 			<UpcomingMovie upcomingMovies={upcomingMovies.results} />
 			<div className='flex'>
