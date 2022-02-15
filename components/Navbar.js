@@ -4,7 +4,7 @@ export default function Navbar() {
 		<nav className='bg-black'>
 			<div className='font-bold text-neutral-100 p-4 max-w-7xl mx-auto container tracking-widest font-mukta'>
 				<Link href='/'>
-					<a className='text-base md:text-2xl'>
+					<a className='text-base md:text-2xl pl-8'>
 						Wet<span className='text-red-500'>flix</span>
 					</a>
 				</Link>

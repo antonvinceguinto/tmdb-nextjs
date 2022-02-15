@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function MovieCard({ movie }) {
 	return (
-		<Link href={`/movie/${movie.id}`}>
+		<Link href={`/movie/${movie.id}`} passHref>
 			<div className='cursor-pointer w-96 mx-2 my-2 flex-shrink-0 relative'>
 				<Image
 					src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}

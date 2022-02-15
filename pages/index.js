@@ -18,7 +18,7 @@ export default function Home({ popularMovies, upcomingMovies }) {
 	)
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const popularRes = await axios(`${server}/popular?api_key=${process.env.API_KEY}&language=en-US&page=1`)
 	const popularMovies = popularRes.data
 
