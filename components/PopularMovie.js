@@ -26,7 +26,7 @@ function ControlledCarousel({ movies }) {
 				// <Link href={`/movie/${movie.id}`} key={movie.id} passHref>
 				<Carousel.Item key={movie.id} className='cursor-pointer'>
 					<Image
-						src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+						src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
 						width={1400}
 						height={700}
 						objectFit='object-contain'
